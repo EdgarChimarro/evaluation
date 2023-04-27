@@ -1,0 +1,56 @@
+{
+  "paginas" : {
+    "label" : "paginas",
+    "items" : [ ],
+    "directories" : {
+      "compras" : {
+        "label" : "compras",
+        "items" : [ ],
+        "directories" : {
+          "Reportes" : {
+            "label" : "Reportes",
+            "items" : [ {
+              "label" : "reporteA.xhtml",
+              "routerLink" : "/paginas/compras/Reportes/reporteA.xhtml"
+            }, {
+              "label" : "reporteB.xhtml",
+              "routerLink" : "/paginas/compras/Reportes/reporteB.xhtml"
+            } ],
+            "directories" : { }
+          },
+          "procesos" : {
+            "label" : "procesos",
+            "items" : [ {
+              "label" : "facturaProveedor.xhtml",
+              "routerLink" : "/paginas/compras/procesos/facturaProveedor.xhtml"
+            }, {
+              "label" : "recepcionProveedor.xhtml",
+              "routerLink" : "/paginas/compras/procesos/recepcionProveedor.xhtml"
+            } ],
+            "directories" : { }
+          }
+        }
+      },
+      "nomina" : {
+        "label" : "nomina",
+        "items" : [ ],
+        "directories" : {
+          "configuracion" : {
+            "label" : "configuracion",
+            "items" : [ ],
+            "directories" : {
+              "empleados" : {
+                "label" : "empleados",
+                "items" : [ {
+                  "label" : "empleado.xhtml",
+                  "routerLink" : "/paginas/nomina/configuracion/empleados/empleado.xhtml"
+                } ],
+                "directories" : { }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

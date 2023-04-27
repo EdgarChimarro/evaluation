@@ -1,6 +1,8 @@
 package com.demo.model;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import lombok.Data;
@@ -12,9 +14,11 @@ import lombok.Data;
 @Data
 public class Directory {
 
+    public static Directory root = new Directory("/");
+
     private String label;
-    private HashMap<String, String> items = new HashMap<>();
-    private Map<String, Directory> directories = new HashMap<String, Directory>();
+    private List<Items> items = new ArrayList<>();
+    private Map<String, Directory> directories = new HashMap<>();
 
     public Directory(String label) {
 	this.label = label;
@@ -28,11 +32,11 @@ public class Directory {
 	this.label = label;
     }
 
-    public HashMap<String, String> getItems() {
+    public List<Items> getItems() {
 	return items;
     }
 
-    public void setItems(HashMap<String, String> items) {
+    public void setItems(List<Items> items) {
 	this.items = items;
     }
 
