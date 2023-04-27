@@ -1,6 +1,7 @@
 package com.demo.model;
 
 import java.util.HashMap;
+import java.util.Map;
 
 import lombok.Data;
 
@@ -10,38 +11,37 @@ import lombok.Data;
  */
 @Data
 public class Directory {
-	
-	 private String pathName;
-     private HashMap<String, String> files = new HashMap<>();
-     private HashMap<String, Directory> directories = new HashMap<>();
-     
-     public Directory(String pathName) {
-         this.pathName = pathName;
-     }
 
-	public String getPathName() {
-		return pathName;
-	}
+    private String label;
+    private HashMap<String, String> items = new HashMap<>();
+    private Map<String, Directory> directories = new HashMap<String, Directory>();
 
-	public void setPathName(String pathName) {
-		this.pathName = pathName;
-	}
+    public Directory(String label) {
+	this.label = label;
+    }
 
-	public HashMap<String, String> getFiles() {
-		return files;
-	}
+    public String getLabel() {
+	return label;
+    }
 
-	public void setFiles(HashMap<String, String> files) {
-		this.files = files;
-	}
+    public void setLabel(String label) {
+	this.label = label;
+    }
 
-	public HashMap<String, Directory> getDirectories() {
-		return directories;
-	}
+    public HashMap<String, String> getItems() {
+	return items;
+    }
 
-	public void setDirectories(HashMap<String, Directory> directories) {
-		this.directories = directories;
-	}
-     
-     
+    public void setItems(HashMap<String, String> items) {
+	this.items = items;
+    }
+
+    public Map<String, Directory> getDirectories() {
+	return directories;
+    }
+
+    public void setDirectories(Map<String, Directory> directories) {
+	this.directories = directories;
+    }
+
 }
